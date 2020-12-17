@@ -8,13 +8,18 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const emailAn = "test@gmail.com";
   const passwordAn = "test";
+  const emailSt = "student@gmail.com";
+  const passwordSt = "student";
 
   function validateForm() {
     if (email.match(emailAn) && password.match(passwordAn)) {
-      console.log("Great Success");
+      console.log("Great Success Admin");
+      return true;
+    } else if (email.match(emailSt) && password.match(passwordSt)) {
+      console.log("Great Success Student");
       return true;
     } else {
-      return console.log("No Success");
+      console.log("No Success");
       return false;
     }
   }
